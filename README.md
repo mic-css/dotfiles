@@ -20,6 +20,7 @@ Thanks to Trevor D Miller for this [awesome set-up](https://trevordmiller.com/bl
 More setup goodies:
 * [pure prompt](https://github.com/sindresorhus/pure)
 * [nova theme](https://trevordmiller.com/projects/nova)
+* [zsh syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
 
 
 ```
