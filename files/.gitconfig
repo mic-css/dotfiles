@@ -3,6 +3,7 @@
 [user]
 	name = Mic Cassano
 	email = mic.cassano@gmail.com
+	signingkey = F1C76B899989547292201151F1CA68A460D594BB
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true

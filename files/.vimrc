@@ -1,3 +1,8 @@
+" Silence DeprecationWarning in UtilSnips with Python 3.7
+if has('python3')
+  silent! python3 1
+endif
+
 " ==================================================================
 " PLUGINS
 " ==================================================================
@@ -11,7 +16,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'trevordmiller/nova-vim'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-vinegar'
-" Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
