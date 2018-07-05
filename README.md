@@ -10,13 +10,12 @@ Config files for:
 
 Thanks to Trevor D Miller for this [awesome set-up](https://trevordmiller.com/blog/dotfiles).
 
-# Setup
+## Setup
 
-- Clone this repo
-- `cd` to the directory where you cloned it
-- Run the set up script: `./index`
+* Clone repo
+* Run setup script: `./index`
 
-# Other
+## Other
 
 More setup goodies:
 * [pure prompt](https://github.com/sindresorhus/pure)
