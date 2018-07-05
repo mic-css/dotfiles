@@ -1,0 +1,40 @@
+#!/bin/bash
+set -euo pipefail
+
+printf "\nSymlinking dotfiles:\n\n"
+
+root_files=(
+	".eslintrc.json"
+	".gitconfig"
+	".gitignore"
+	".prettierrc.json"
+	".tmux.conf"
+	".vimrc"
+	".zsrhc"
+)
+
+for root_file in "${root_files[@]}"; do
+	if [ -L "$HOME/$root_file" ]; then
+		echo "Symlink for $root_file already exists"
+	elif [ -f "$HOME/$root_file" ]; then
+		echo "$root_file already exists"
+	else
+		echo "Symlinking $root_file"
+		ln -s "$(pwd)/files/$root_file" "$HOME/$root_file"
+	fi
+done
+
+root_directories=(
+	".vim/"
+)
+
+for root_directory in "${root_directories[@]}"; do
+	if [ -L "$HOME/$root_directory" ]; then
+		echo "Symlink for $root_directory already exists"
+	elif [ -d "$HOME/$root_directory" ]; then
+		echo "$root_directory already exists"
+	else
+		echo "Symlinking $root_directory"
+		ln -s "$(pwd)/files/$root_directory"* "$HOME/$root_directory"
+	fi
+done

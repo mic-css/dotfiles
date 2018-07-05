@@ -1,0 +1,11 @@
+# GENERAL
+--exclude=.git
+--exclude=.DS_Store
+
+# JAVASCRIPT
+--exclude=node_modules
+--exclude=package-lock.json
+--exclude=.next
+--exclude=storybook-static
+--exclude=cjs
+--exclude=es
