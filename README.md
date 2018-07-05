@@ -22,6 +22,7 @@ More setup goodies:
 * [nova theme](https://trevordmiller.com/projects/nova)
 
 
+```
                        .,,uod8B8bou,,.
               ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.
          ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||
@@ -52,3 +53,4 @@ More setup goodies:
                   `!988888888899fT|!^"'
                     `!9899fT|!^"'
                       `!^"'
+```
