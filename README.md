@@ -1,10 +1,10 @@
 # dotfiles
 
 Config files for:
-* bash
 * git
 * eslint
 * tmux
+* prettier
 * vim
 * zsh
 
@@ -18,8 +18,9 @@ Thanks to Trevor D Miller for this [awesome set-up](https://trevordmiller.com/bl
 
 # Other
 
-https://github.com/sindresorhus/pure
-https://trevordmiller.com/projects/nova
+More setup goodies:
+* [pure prompt](https://github.com/sindresorhus/pure)
+* [nova theme](https://trevordmiller.com/projects/nova)
 
 
                        .,,uod8B8bou,,.
