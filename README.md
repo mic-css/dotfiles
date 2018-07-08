@@ -1,12 +1,18 @@
 # dotfiles
 
 Config files for:
-* git
-* eslint
-* tmux
-* prettier
-* vim
-* zsh
+
+🐙 git
+
+🔍 eslint
+
+💻 tmux
+
+💅 prettier
+
+📝 vim
+
+🔧 zsh
 
 Thanks to Trevor D Miller for this [awesome set-up](https://trevordmiller.com/blog/dotfiles).
 
