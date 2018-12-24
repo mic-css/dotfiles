@@ -3,7 +3,7 @@
 [user]
 	name = Mic Cassano
 	email = mic.cassano@gmail.com
-	signingkey = F1C76B899989547292201151F1CA68A460D594BB
+	signingkey = 7D1544165EAE1A58137900B6FBC4D85E46D5A2A6
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
@@ -16,11 +16,11 @@
 	st = status
 	aa = add -A
 	pop = stash pop
-	pr = pull-request
+	pr = pull-request -b
 [gpg]
 	program = gpg
 [commit]
-	gpgsign = true
+	gpgsign = false
 [color]
   pager = true
   ui = auto

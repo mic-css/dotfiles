@@ -38,3 +38,15 @@ for root_directory in "${root_directories[@]}"; do
 		ln -s "$(pwd)/files/$root_directory"* "$HOME/$root_directory"
 	fi
 done
+
+vim_directories=(
+	".vim/backup_files"
+	".vim/swap_files"
+	".vim/undo_files"
+)
+
+for vim_directory in "${vim_directories[@]}"; do
+	if [ -d "$HOME/$vim_directory" ]; then
+		mkdir "$HOME/$vim_directory"
+	fi
+done

@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/miccassano/.oh-my-zsh
+export ZSH=/Users/$(whoami)/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -71,22 +71,20 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
- 
-eval "$(rbenv init -)"
+
+eval "$(rbenv init -)" 
 eval "$(hub alias -s)"
-export PATH=/usr/local/Cellar/postgresql@9.4/9.4.18/bin:$PATH
+
 autoload -U promptinit; promptinit
 prompt pure
+
+# Add vi bindings
+set -o vi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -104,4 +102,24 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias v="vim"
-alias vimrc="vim ~/.vimrc"
+alias vimconfig="vim ~/.vimrc"
+alias zshconfig="vim ~/.zshrc"
+
+alias so=source
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+# Shortcut for transfer.sh
+transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
+tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/Mic/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Mic/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/Mic/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/Mic/google-cloud-sdk/completion.zsh.inc'; fi
+
+export ANDROID_SDK=/Users/Mic/Library/Android/sdk
+export PATH=/Users/Mic/Library/Android/sdk/platform-tools:$PATH

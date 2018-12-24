@@ -24,9 +24,11 @@ Thanks to Trevor D Miller for this [awesome set-up](https://trevordmiller.com/bl
 ## Other
 
 More setup goodies:
+* [fzf](https://github.com/junegunn/fzf#as-vim-plugin)
 * [pure prompt](https://github.com/sindresorhus/pure)
 * [nova theme](https://trevordmiller.com/projects/nova)
 * [zsh syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+* [source code pro](https://github.com/adobe-fonts/source-code-pro)
 
 
 ```
